@@ -64,7 +64,16 @@ h1 + p {
 }
 
 /* ---------- 4. Header and navigation ---------- */
+/* One merged rule: colours (Task 4), flex layout (Task 5.2), sticky (Task 5.1) */
 .site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: var(--brand-dark);
   color: #fff;
   padding: 12px 24px;
@@ -253,12 +262,7 @@ input[placeholder]:not(:placeholder-shown):invalid {
 
 /* ---------- 10. Positioning ---------- */
 
-/* sticky: stays at the top while the page scrolls */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+/* sticky: the header's sticky rules are now in the merged .site-header rule (section 4) */
 
 /* absolute: placed inside its nearest positioned parent */
 .menu-item { position: relative; }
@@ -310,13 +314,7 @@ input[placeholder]:not(:placeholder-shown):invalid {
 }
 
 /* ---------- 11. Flexbox: header, nav, footer ---------- */
-.site-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
+/* (the header's flex rules are now in the merged .site-header rule, section 4) */
 .brand {
   display: flex;
   align-items: center;
